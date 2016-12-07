@@ -9,10 +9,14 @@ Docker containers wrap a piece of software in a complete filesystem that contain
 # How Use this Image?
 
 ## For Create a New Site
-	docker run -v $(pwd):/jekyll/site:rw -it jekyll new
+  mkdir blog
+  cd blog/
+	docker run -v $(pwd):/src/site:rw -it edaniel15/jekyll-generator new
+	docker run -v $(pwd):/src/site:rw -it edaniel15/jekyll-generator build
+	docker run -v $(pwd):/src/site:rw -it edaniel15/jekyll-generator serve
 
 ## Alias?
-	alias='docker run -v $(pwd):/jekyll/site:rw -it jekyll'
+	alias jekyll='docker run -v $(pwd):/src/site:rw -it edaniel15/jekyll-generator'
 	cd /my-awesome-site
 	jekyll new
 	jekyll build
