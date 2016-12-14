@@ -10,7 +10,6 @@ RUN apk add --update musl-dev bash ca-certificates gcc make linux-headers curl m
 RUN rm /var/cache/apk/*
 
 ADD ./Gemfile /src
-ADD ./main.sh /src
 RUN gem install bundler
 
 RUN cd /src && bundler install
@@ -61,5 +60,7 @@ RUN info(){ printf '\n--\n%s\n--\n\n' "$*"; } \
     && rm -rf /root/nodejs \
     && echo 'Done! =)'
 
+ADD ./main.sh /src
+ENV JEKYLL_ENV development
 EXPOSE 4000
 ENTRYPOINT ["sh", "main.sh"]

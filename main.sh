@@ -1,18 +1,7 @@
 #!/bin/bash
 
-MESSAGE="please insert: new, build or serve"
-
-if [ -z "$1" ]
-  then
-    echo $MESSAGE
-    exit 1
-fi
-
-if [ $# -gt 1 ]
-then
-  echo $MESSAGE
-  exit 1
-fi
+MESSAGE="valid options: [new, build, serve]"
+echo $MESSAGE
 
 for opt in "$@"
 do
@@ -29,10 +18,7 @@ do
   serve)
     echo "Initialize Server!"
     cd site/
-    jekyll serve --watch
-    ;;
-  *)
-    echo $MESSAGE
+    jekyll serve $1 $2 $3 --host 0.0.0.0
     ;;
   esac
 done
