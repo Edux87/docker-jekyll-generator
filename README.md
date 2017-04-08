@@ -1,5 +1,5 @@
 # Docker Jekyll Generator
-[spanish reference](https://edux87.github.io/docker/2016/12/07/docker-jekyll-generator.html)
+[spanish reference](https://edux87.github.io/docker/2016/12/07/docker-jekyll-generator/)
 
 ## About jekyll
 [Jekyll](http://jekyllrb.com/) has an extensive theme system, which allows you to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content.
