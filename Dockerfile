@@ -6,7 +6,7 @@ ENV TERM xterm
 RUN mkdir -p /src/site
 WORKDIR /src
 
-RUN apk add --no-cache build-base gcc libcurl
+RUN apk add --no-cache build-base gcc libcurl make
 
 RUN gem install bundler
 RUN gem install jekyll
