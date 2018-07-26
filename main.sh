@@ -8,17 +8,17 @@ do
   case $opt in
   new)
     echo "Create a New Awesome Site!"
-    jekyll new site
+    bundle exec jekyll new site
     ;;
   build)
     echo "Built!"
     cd site/
-    jekyll build
+    bundle exec jekyll build
     ;;
   serve)
     echo "Initialize Server!"
     cd site/
-    jekyll serve $1 $2 $3 --host 0.0.0.0
+    bundle exec jekyll serve $1 $2 $3 --host 0.0.0.0
     ;;
   esac
 done
