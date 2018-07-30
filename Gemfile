@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-gem 'jekyll-paginate'
-gem 'jekyll-gist'
-gem 'jekyll-watch'
-gem 'jekyll-remote-theme'
-gem 'jekyll-minifier'
-gem 'jekyll-textile-converter'
-gem 'jekyll-bliss'
+group :jekyll_plugins do
+  gem "github-pages"
+  gem "jekyll-paginate"
+  gem "jekyll-gist"
+  gem "jekyll-watch"
+  gem "jekyll-remote-theme"
+  gem "jekyll-minifier"
+  gem "jekyll-textile-converter"
+end

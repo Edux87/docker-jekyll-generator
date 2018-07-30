@@ -8,7 +8,9 @@ WORKDIR /src
 
 RUN apk add --no-cache build-base gcc libcurl make
 
-RUN gem install bundler jekyll
+RUN gem install jekyll -v '3.8.3'
+RUN gem install bundler
+RUN jekyll --version
 
 COPY ./Gemfile /src
 RUN cd /src && bundler install
