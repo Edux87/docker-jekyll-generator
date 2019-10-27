@@ -1,11 +1,11 @@
-FROM ruby:2.3
+FROM ruby:2.4
 MAINTAINER Edgar Castanheda <edaniel15@gmail.com> (@Edux87)
 ENV TERM xterm
 
 RUN mkdir -p /src/site
 WORKDIR /src
 
-RUN gem install jekyll -v '3.8.3'
+RUN gem install jekyll -v '4.0.0'
 RUN gem install bundler
 RUN gem install nokogiri
 RUN gem install public_suffix --version 3.0.2
