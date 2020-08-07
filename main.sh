@@ -1,4 +1,5 @@
 #!/bin/bash
+
 MESSAGE="valid options: [new, build, serve]"
 echo $MESSAGE
 

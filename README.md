@@ -16,6 +16,13 @@ Docker containers wrap a piece of software in a complete filesystem that contain
 		docker run -v $(pwd):/src/site:rw -it edaniel15/jekyll-generator build
 		docker run -v $(pwd):/src/site:rw -p 4000:4000 -it edaniel15/jekyll-generator serve
 
+## For LiveReload
+	  cd blog/
+		docker run -v $(pwd):/src/site:rw -p 35729:35729 -it edaniel15/jekyll-generator serve --livereload
+		// Or with arguments for many stages
+		docker run -v $(pwd):/src/site:rw -p 35729:35729 -it edaniel15/jekyll-generator serve --livereload --config _config.yml,_config-dev.yml
+		// Run site in localhost:35729
+
 ## Alias?
 	alias jekyll='docker run -v $(pwd):/src/site:rw -p 4000:4000 -it edaniel15/jekyll-generator'
 	cd /my-awesome-site
