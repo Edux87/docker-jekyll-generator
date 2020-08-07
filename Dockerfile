@@ -5,7 +5,7 @@ ENV TERM xterm
 RUN mkdir -p /src/site
 WORKDIR /src
 
-RUN gem install jekyll -v '4.0.0'
+RUN gem install jekyll -v '4.1.1'
 RUN gem install bundler
 RUN gem install nokogiri
 RUN gem install public_suffix --version 3.0.2
@@ -28,4 +28,5 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 EXPOSE 4000
+EXPOSE 35729
 ENTRYPOINT ["sh", "main.sh"]
