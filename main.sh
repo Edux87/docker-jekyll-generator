@@ -2,6 +2,7 @@
 
 MESSAGE="valid options: [new, build, serve]"
 echo $MESSAGE
+bundle exec jekyll -v
 
 for opt in "$@"
 do
